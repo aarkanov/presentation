@@ -1,0 +1,162 @@
+<section data-background="images/earth.jpg">
+  <h1>Mobile Testing</h1>
+  <h1>A Brave New World!</h1>
+</section>
+<section>
+  <h2>Agenda</h2>
+  <ul>
+    <li>Intro to Mobile Testing</li>
+    <li>Mobile Testing Environment</li>
+    <li>Mobile Tests Overview</li>
+    <li>Future of Mobile Testing at OTPP</li>
+    <li>Demo</li>
+  </ul>
+</section>
+<section>
+  <section data-background="images/mobileEye.jpg">
+    <h1>In the Beginning</h1>
+  </section>
+  <section>
+    <img src="images/confused.gif">
+  </section>
+  <section>
+    <img src="images/tampa.jpg">
+  </section>
+  <section>
+    <img src="images/webinar.jpeg">
+  </section>
+  <section>
+    <img src="images/keepCalm.png">
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Member Mobile Experience 2013</h2>
+    <img src="images/appBuilding.png">
+  </section>
+  <section>
+    <img src="images/challenges.png">
+  </section>
+  <section>
+    <img src="images/iosdevices.jpg">
+    <img src="images/androidFragmentation.jpg">
+  </section>
+  <section>
+    <img src="images/methodology.png">
+  </section>
+  <section>
+    <img src="images/ecoSystem.png">
+  </section>
+  <section>
+    <img src="images/mobileChallenges.jpg">
+  </section>
+</section>
+<section>
+  <section>
+    <h1>Mobile Testing Environment at OTPP</h1>
+  </section>
+  <section>
+    <img src="images/AppiumSetup.png">
+  </section>
+  <section>
+    <img src="images/appium-logo.png">
+    <br>
+    <img src="images/appiumTests.png">
+  </section>
+  <section>
+    <img src="images/testNG.png">
+    <pre><code>@Test(groups = {"RE-EMP", "OCC", "RE-EMPsmoke", "all"})
+public void fullDayTest() {
+
+//add a day
+TestUtils.addFullDay(wd, "worklog");
+
+//assert count went up
+TestUtils.delay(500);
+WebElement daycount = wd.findElementById(TestKeys.WORK_DAY_COUNT_LOCATION);
+TestUtils.delay(200);
+AssertJUnit.assertEquals("1", daycount.getText());
+
+//quit
+TestUtils.delay(500);
+wd.quit();
+    }</code></pre>
+  </section>
+  <section>
+    <img src="images/protractor.png">
+    <pre><code>it('will add a full day', function() {
+  browser.sleep(1000);
+  browser.switchTo().alert().accept();
+  common.resetApplication();
+  common.addNewWorkDay();
+  var dayCounter = common.getDayCounter();
+  expect(dayCounter).toEqual("1");
+});</code></pre>
+  </section>
+  <section>
+    <img src="images/monkeyTesting.jpg">
+  </section>
+  <section>
+    <img src="images/sauceLabs.gif">
+    <br>
+    <img src="images/browsers.jpg">
+  </section>
+  <section>
+    <h2>Devices</h2>
+    <img src="images/androindApple.jpg">
+  </section>
+  <section>
+    <img src="images/lab.jpg">
+  </section>
+</section>
+<section>
+  <section>
+    <h1>Mobile Tests Overview</h1>
+  </section>
+  <section>
+    <h2>Worklog</h2>
+    <img src="images/Worklog.jpg">
+  </section>
+  <section>
+    <h2>ClassTime</h2>
+    <img src="images/classtime.jpg">
+  </section>
+  <section>
+    <h2>BabySteps</h2>
+    <img src="images/babySteps.png">
+  </section>
+  <section data-background="http://members.otpp.me"></section>
+</section>
+<section>
+  <section data-background="images/future.jpg">
+    <h1>Future of Mobile Testing at OTPP</h1>
+  </section>
+  <section>
+    <img src="images/futureApp.png">
+  </section>
+  <section data-background="images/security.gif"></section>
+  <section>
+    <img src="images/internetExplorer.jpg">
+  </section>
+  <section>
+    <img src="images/performance.jpg">
+  </section>
+  <section>
+    <img src="images/cloud.jpg">
+  </section>
+  <section>
+    <img src="images/devices.jpg">
+  </section>
+</section>
+<section>
+  <h1>Demo Time!</h1>
+</section>
+<section>
+  <img src="images/questions.jpeg">
+</section>
+<section>
+  <h1>
+    Thanks!
+  </h1>
+  <img src="images/thankYou.png">
+</section>

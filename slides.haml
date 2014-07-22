@@ -1,0 +1,136 @@
+%section{ 'data-background' => 'images/earth.jpg' }
+  %h1 Mobile Testing
+  %h1 A Brave New World!
+
+%section
+  %h2 Agenda
+  %ul 
+    %li Intro to Mobile Testing
+    %li Mobile Testing Environment
+    %li Mobile Tests Overview
+    %li Future of Mobile Testing at OTPP
+    %li Demo
+
+%section
+  %section{ 'data-background' => 'images/mobileEye.jpg'}
+    %h1 In the Beginning
+  %section
+    %img{ 'src' => 'images/confused.gif'}
+  %section
+    %img{ 'src' => 'images/tampa.jpg' }
+  %section
+    %img{ 'src' => 'images/webinar.jpeg' }
+  %section
+    %img{ 'src' => 'images/keepCalm.png' }
+
+%section
+  %section
+    %h2 Member Mobile Experience 2013
+    %img{ 'src' => 'images/appBuilding.png'}
+  %section
+    %img{ 'src' => 'images/challenges.png'}
+  %section
+    %img{ 'src' => 'images/iosdevices.jpg'}
+    %img{ 'src' => 'images/androidFragmentation.jpg'}
+  %section
+    %img{ 'src' => 'images/methodology.png'}
+  %section
+    %img{ 'src' => 'images/ecoSystem.png'}
+  %section 
+    %img{ 'src' => 'images/mobileChallenges.jpg'}
+
+
+%section
+  %section
+    %h1 Mobile Testing Environment at OTPP
+  %section
+    %img{ 'src' => 'images/AppiumSetup.png'}
+  %section
+    %img{ 'src' => 'images/appium-logo.png'}
+    <br>
+    %img{ 'src' => 'images/appiumTests.png'}
+  %section
+    %img{ 'src' => 'images/testNG.png'}  
+    %pre 
+      %code
+        :preserve
+          @Test(groups = {"RE-EMP", "OCC", "RE-EMPsmoke", "all"})
+          public void fullDayTest() {
+
+          //add a day
+          TestUtils.addFullDay(wd, "worklog");
+
+          //assert count went up
+          TestUtils.delay(500);
+          WebElement daycount = wd.findElementById(TestKeys.WORK_DAY_COUNT_LOCATION);
+          TestUtils.delay(200);
+          AssertJUnit.assertEquals("1", daycount.getText());
+
+          //quit
+          TestUtils.delay(500);
+          wd.quit(); 
+        }
+  %section
+    %img{ 'src' => 'images/protractor.png'}
+    %pre
+      %code
+        :preserve
+          it('will add a full day', function() {
+            browser.sleep(1000);
+            browser.switchTo().alert().accept();
+            common.resetApplication();
+            common.addNewWorkDay();
+            var dayCounter = common.getDayCounter();
+            expect(dayCounter).toEqual("1");
+          });
+  %section
+    %img{ 'src' => 'images/monkeyTesting.jpg'}    
+  %section
+    %img{ 'src' => 'images/sauceLabs.gif'}
+    <br>
+    %img{ 'src' => 'images/browsers.jpg'}
+  %section
+    %h2 Devices
+    %img{ 'src' => 'images/androindApple.jpg'}
+  %section
+    %img{ 'src' => 'images/lab.jpg'}
+
+%section
+  %section
+    %h1 Mobile Tests Overview
+  %section
+    %h2 Worklog
+    %img{ 'src' => 'images/Worklog.jpg'} 
+  %section
+    %h2 ClassTime
+    %img{ 'src' => 'images/classtime.jpg'}
+  %section
+    %h2 BabySteps
+    %img{ 'src' => 'images/babySteps.png'}
+  %section{ 'data-background' => 'http://members.otpp.me'}
+
+%section
+  %section{ 'data-background' => 'images/future.jpg'}
+    %h1 Future of Mobile Testing at OTPP
+  %section
+    %img{ 'src' => 'images/futureApp.png' }
+  %section{ 'data-background' => 'images/security.gif'}
+  %section
+    %img{ 'src' => 'images/internetExplorer.jpg'}
+  %section
+    %img{ 'src' => 'images/performance.jpg'}
+  %section
+    %img{ 'src' => 'images/cloud.jpg'}
+  %section
+    %img{ 'src' => 'images/devices.jpg'}
+
+%section
+  %h1 Demo Time!
+ 
+%section
+  %img{ 'src' => 'images/questions.jpeg' }
+
+%section
+  %h1
+    Thanks!
+  %img{ 'src' => 'images/thankYou.png' }

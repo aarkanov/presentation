@@ -19,8 +19,9 @@
   </aside>
 </section>
 <section>
-  <section data-background="images/mobileEye.jpg">
+  <section>
     <h1>In the Beginning</h1>
+    <img src="images/mobileEye.jpg">
     <aside class="notes">
       So where did all of this mobile testing talk start?
       2012 plans are announced to make a mobile app
@@ -98,8 +99,7 @@
       <ul>
         <li>We chose to release iOS and Android apps</li>
         <li>For iOS even though there is only one manufacturer there is still a fragmentation to consider</li>
-        <li>For Android</li>
-        <li>
+        <li>For Android we had to take a bit of a different approach (high end plus low end)</li>
       </ul>
     </aside>
   </section>
@@ -107,10 +107,9 @@
     <img src="images/methodology.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>We also had to update our methodology</li>
+        <li>There were plenty of ways we could approach the testing of the application</li>
+        <li>It all depended</li>
       </ul>
     </aside>
   </section>
@@ -118,10 +117,9 @@
     <img src="images/ecoSystem.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>the eco system is vast in mobile</li>
+        <li>you can build hybrid, native, or a web app</li>
+        <li>depending on the app the we chose to build we would have to adjust our testing accordingly</li>
       </ul>
     </aside>
   </section>
@@ -129,10 +127,8 @@
     <img src="images/mobileChallenges.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Overall there are several challenges that each company faces</li>
+        <li>And we had to face most of these as well and deal with them</li>
       </ul>
     </aside>
   </section>
@@ -142,21 +138,9 @@
     <h1>Mobile Testing Environment at OTPP</h1>
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
-      </ul>
-    </aside>
-  </section>
-  <section>
-    <img src="images/AppiumSetup.png">
-    <aside class="notes">
-      <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Once we figured out what challenges we need to takle</li>
+        <li>We set out to setup the environment</li>
+        <li>We had to choose tools, devices, methodologies</li>
       </ul>
     </aside>
   </section>
@@ -166,10 +150,12 @@
     <img src="images/appiumTests.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Appium is an open source test automatiom framework for use with native and hybrid mobile apps</li>
+        <li>It drives iOS and Android apps using the WebDriver JSON Wire Protocol</li>
+        <li>Large community</li>
+        <li>Frequent releases</li>
+        <li>lots of support</li>
+        <li>allowed us to leverage our Selenium knowledge</li>
       </ul>
     </aside>
   </section>
@@ -193,10 +179,10 @@ wd.quit();
     }</code></pre>
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>We used TestNG to write the actual tests</li>
+        <li>As a department we have been using to TestNG as the preffered tool for writing and executing tests</li>
+        <li>Allows for the tests to sit together with the code and run together with the code</li>
+        <li>this provides us with quicker feedback re any regression in the code</li>
       </ul>
     </aside>
   </section>
@@ -212,10 +198,12 @@ wd.quit();
 });</code></pre>
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>The other tool we used was developed specifically for AngularJS</li>
+        <li>Protractor is an end-to-end test framework</li>
+        <li>It runs tests against your application running in a real browser</li>
+        <li>It interacts as user would</li>
+        <li>Since our app was hybrid, using protractor allowed us to run multiple functional tests in a fast manner</li>
+        <li>while running sanity tests on real devices</li>
       </ul>
     </aside>
   </section>
@@ -223,23 +211,13 @@ wd.quit();
     <img src="images/monkeyTesting.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
-      </ul>
-    </aside>
-  </section>
-  <section>
-    <img src="images/sauceLabs.gif">
-    <br>
-    <img src="images/browsers.jpg">
-    <aside class="notes">
-      <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Monkey test was another approach we had to make sure our apps were stable</li>
+        <li>A monkey test runs with no specific test in mind</li>
+        <li>It would enter random strings into boxes</li>
+        <li>Click on random boxes</li>
+        <li>Open and close the app</li>
+        <li>Attempt to open other apps and then our app</li>
+        <li>Purpose was to make the app crash through stranious use</li>
       </ul>
     </aside>
   </section>
@@ -248,10 +226,25 @@ wd.quit();
     <img src="images/androindApple.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>For iOS we decided that we will support iPhone 4,5 and iPad 2 and up</li>
+        <li>We currently have iPhone 4,5,3gs and iPad 2 as test devices</li>
+        <li>For Android we needed a bit of a different approach due the vast spectrum of devices and OS</li>
+        <li>We decided we will support OS 4.0 and up</li>
+        <li>In order not to purchase 200 devices, we chose to have a low end and a high end device</li>
+        <li>and make the assumption that if the app works on those, it will work on everything in between</li>
+      </ul>
+    </aside>
+  </section>
+  <section>
+    <img src="images/AppiumSetup.png">
+    <aside class="notes">
+      <ul>
+        <li>Once all the devices arrived we had to connect them and set them all up for automation</li>
+        <li>This is what the Appium setup looks like</li>
+        <li>We use Git to store all our test code</li>
+        <li>Bamboo to allow us to run the tests whenever we want</li>
+        <li>We have a selenium server that allows us to have multiple devices connected to appium</li>
+        <li>and we have the appium servers running on the Mac machines that correspond to every device</li>
       </ul>
     </aside>
   </section>
@@ -259,10 +252,7 @@ wd.quit();
     <img src="images/lab.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>This is what it actually looks like</li>
       </ul>
     </aside>
   </section>
@@ -272,10 +262,7 @@ wd.quit();
     <h1>Mobile Tests Overview</h1>
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>So what do we actually test with all this technology and hardware?</li>
       </ul>
     </aside>
   </section>
@@ -284,10 +271,15 @@ wd.quit();
     <img src="images/Worklog.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Worklog helps you track your re-employment</li>
+        <li>The app is not connected to our databases</li>
+        <li>allows re-employment pensioners to add days</li>
+        <li>allows them also to track which school they worked at</li>
+        <li>which teacher they worked for</li>
+        <li>what was the job id</li>
+        <li>app is bilingual</li>
+        <li>displays warning messages at 40 days, above 50 days , and once you surpass your limit</li>
+        <li>available in Android and iOS</li>
       </ul>
     </aside>
   </section>
@@ -296,10 +288,8 @@ wd.quit();
     <img src="images/classtime.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Classtime is an application that allows the user to track their occasional employment</li>
+        <li>similar to worklog however does not any warning messages</li>
       </ul>
     </aside>
   </section>
@@ -308,35 +298,34 @@ wd.quit();
     <img src="images/babySteps.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>BabySteps is the application that we are developing this year</li>
+        <li>It will allow mothers to view their maternity leaves and interact to a certain degree with them</li>
+        <li>It will be our first connected app</li>
+        <li>Members will have to sign in to view their maternity information</li>
       </ul>
     </aside>
   </section>
   <section>
     <h2>New Member Web</h2>
-    <img src="images/webSite.png">
+    <img src="images/screenShot.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>In 2014 we began to design and implment a new responsive web experience for members</li>
+        <li>It has a more mobile first mind set and focus</li>
+        <li>We decided to take the same approach in terms of device support</li>
+        <li>Appium also allowed us to test the sites on a real device</li>
+        <li>we also used protractor to run the heavy testing on mobile web</li>
       </ul>
     </aside>
   </section>
 </section>
 <section>
-  <section data-background="images/future.jpg">
-    <h1>Future of Mobile Testing at OTPP</h1>
+  <section>
+    <img src="images/future.jpg">
+    <h3>Future of Mobile Testing at OTPP</h3>
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>So where do we go from here??</li>
       </ul>
     </aside>
   </section>
@@ -344,10 +333,9 @@ wd.quit();
     <img src="images/futureApp.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>If we continue developing apps in the future they will get more complicated</li>
+        <li>We will have lots of components that will have to be tested</li>
+        <li>And automation will be essential to make sure that we can tests things quickly</li>
       </ul>
     </aside>
   </section>
@@ -355,20 +343,17 @@ wd.quit();
     <img src="images/screenShot.png">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>The new website is a 5 year project and we will have to make sure it meets its mobile first objective</li>
+        <li>We will leverage all the tools that we have used so far to ensure succesfull testing on the new website</li>
       </ul>
     </aside>
   </section>
   <section data-background="images/security.gif">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Mobile and Web security issues are in the news on a daily basis</li>
+        <li>We will have to make sure that our connected apps, and our mobile sites are secure</li>
+        <li>We will also have to make sure that the member is informed regarding security issues</li>
       </ul>
     </aside>
   </section>
@@ -376,10 +361,23 @@ wd.quit();
     <img src="images/internetExplorer.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>More browser support</li>
+        <li>We have users that are using pcs/macs/tablets/phones</li>
+        <li>Android/iOS/Windows/Linux/Mac</li>
+        <li>We need to make sure that our website are working, and are displaying properly</li>
+        <li>on any device that a user logs in on</li>
+      </ul>
+    </aside>
+  </section>
+  <section>
+    <img src="images/sauceLabs.gif">
+    <br>
+    <img src="images/browsers.jpg">
+    <aside class="notes">
+      <ul>
+        <li>In order to have access to all browsers we need to use tools such as Sauce labs</li>
+        <li>Allows us to test across multiple browsers, and multiple operating systems</li>
+        <li>They will also have a future open of testing on real devices over the cloud</li>
       </ul>
     </aside>
   </section>
@@ -387,21 +385,9 @@ wd.quit();
     <img src="images/performance.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
-      </ul>
-    </aside>
-  </section>
-  <section>
-    <img src="images/cloud.jpg">
-    <aside class="notes">
-      <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>Performance testing will also be very important</li>
+        <li>Most users these days have very high expecations when it comes to web and applications</li>
+        <li>We will have to introduce new tools and make sure that our users get the optimal performance experience</li>
       </ul>
     </aside>
   </section>
@@ -409,10 +395,9 @@ wd.quit();
     <img src="images/devices.jpg">
     <aside class="notes">
       <ul>
-        <li>
-        <li>
-        <li>
-        <li>
+        <li>By 2017 most people will have at least 5 devices that are connected to the internet</li>
+        <li>Most of you in the room most likely have at least 2</li>
+        <li>We will have to make sure that the experience is the same accross all devices</li>
       </ul>
     </aside>
   </section>

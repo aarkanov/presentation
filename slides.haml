@@ -18,8 +18,9 @@
 
 
 %section
-  %section{ 'data-background' => 'images/mobileEye.jpg'}
+  %section
     %h1 In the Beginning
+    %img{ 'src' => 'images/mobileEye.jpg'}
     %aside.notes
       So where did all of this mobile testing talk start?
       2012 plans are announced to make a mobile app
@@ -84,35 +85,30 @@
       %ul
         %li We chose to release iOS and Android apps
         %li For iOS even though there is only one manufacturer there is still a fragmentation to consider
-        %li For Android 
-        %li
+        %li For Android we had to take a bit of a different approach (high end plus low end)
 
   %section
     %img{ 'src' => 'images/methodology.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li We also had to update our methodology
+        %li There were plenty of ways we could approach the testing of the application
+        %li It all depended 
         
   %section
     %img{ 'src' => 'images/ecoSystem.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li the eco system is vast in mobile
+        %li you can build hybrid, native, or a web app 
+        %li depending on the app the we chose to build we would have to adjust our testing accordingly
         
   %section 
     %img{ 'src' => 'images/mobileChallenges.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li Overall there are several challenges that each company faces
+        %li And we had to face most of these as well and deal with them
         
 
 
@@ -121,30 +117,22 @@
     %h1 Mobile Testing Environment at OTPP
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
-        
-  %section
-    %img{ 'src' => 'images/AppiumSetup.png'}
-    %aside.notes
-      %ul
-        %li
-        %li
-        %li
-        %li
-        
+        %li Once we figured out what challenges we need to takle
+        %li We set out to setup the environment 
+        %li We had to choose tools, devices, methodologies
+  
   %section
     %img{ 'src' => 'images/appium-logo.png'}
     <br>
     %img{ 'src' => 'images/appiumTests.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li Appium is an open source test automatiom framework for use with native and hybrid mobile apps
+        %li It drives iOS and Android apps using the WebDriver JSON Wire Protocol
+        %li Large community
+        %li Frequent releases
+        %li lots of support
+        %li allowed us to leverage our Selenium knowledge
         
   %section
     %img{ 'src' => 'images/testNG.png'}  
@@ -169,12 +157,11 @@
         }
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li We used TestNG to write the actual tests
+        %li As a department we have been using to TestNG as the preffered tool for writing and executing tests
+        %li Allows for the tests to sit together with the code and run together with the code
+        %li this provides us with quicker feedback re any regression in the code
         
-
   %section
     %img{ 'src' => 'images/protractor.png'}
     %pre
@@ -190,49 +177,53 @@
           });
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li The other tool we used was developed specifically for AngularJS
+        %li Protractor is an end-to-end test framework
+        %li It runs tests against your application running in a real browser
+        %li It interacts as user would
+        %li Since our app was hybrid, using protractor allowed us to run multiple functional tests in a fast manner
+        %li while running sanity tests on real devices
         
   %section
     %img{ 'src' => 'images/monkeyTesting.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
-          
-  %section
-    %img{ 'src' => 'images/sauceLabs.gif'}
-    <br>
-    %img{ 'src' => 'images/browsers.jpg'}
-    %aside.notes
-      %ul
-        %li
-        %li
-        %li
-        %li
+        %li Monkey test was another approach we had to make sure our apps were stable
+        %li A monkey test runs with no specific test in mind
+        %li It would enter random strings into boxes
+        %li Click on random boxes
+        %li Open and close the app
+        %li Attempt to open other apps and then our app
+        %li Purpose was to make the app crash through stranious use
         
   %section
     %h2 Devices
     %img{ 'src' => 'images/androindApple.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li For iOS we decided that we will support iPhone 4,5 and iPad 2 and up
+        %li We currently have iPhone 4,5,3gs and iPad 2 as test devices
+        %li For Android we needed a bit of a different approach due the vast spectrum of devices and OS
+        %li We decided we will support OS 4.0 and up
+        %li In order not to purchase 200 devices, we chose to have a low end and a high end device
+        %li and make the assumption that if the app works on those, it will work on everything in between
+
+  %section
+    %img{ 'src' => 'images/AppiumSetup.png'}
+    %aside.notes
+      %ul
+        %li Once all the devices arrived we had to connect them and set them all up for automation
+        %li This is what the Appium setup looks like
+        %li We use Git to store all our test code
+        %li Bamboo to allow us to run the tests whenever we want
+        %li We have a selenium server that allows us to have multiple devices connected to appium
+        %li and we have the appium servers running on the Mac machines that correspond to every device
         
   %section
     %img{ 'src' => 'images/lab.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li This is what it actually looks like
         
 
 %section
@@ -240,122 +231,118 @@
     %h1 Mobile Tests Overview
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li So what do we actually test with all this technology and hardware?
+
         
   %section
     %h2 Worklog
     %img{ 'src' => 'images/Worklog.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li Worklog helps you track your re-employment
+        %li The app is not connected to our databases
+        %li allows re-employment pensioners to add days 
+        %li allows them also to track which school they worked at
+        %li which teacher they worked for
+        %li what was the job id
+        %li app is bilingual
+        %li displays warning messages at 40 days, above 50 days , and once you surpass your limit
+        %li available in Android and iOS
         
   %section
     %h2 ClassTime
     %img{ 'src' => 'images/classtime.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li Classtime is an application that allows the user to track their occasional employment
+        %li similar to worklog however does not any warning messages
         
   %section
     %h2 BabySteps
     %img{ 'src' => 'images/babySteps.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li BabySteps is the application that we are developing this year
+        %li It will allow mothers to view their maternity leaves and interact to a certain degree with them
+        %li It will be our first connected app
+        %li Members will have to sign in to view their maternity information
         
   %section 
     %h2 New Member Web
-    %img{ 'src' => 'images/webSite.png'}
+    %img{ 'src' => 'images/screenShot.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li In 2014 we began to design and implment a new responsive web experience for members
+        %li It has a more mobile first mind set and focus
+        %li We decided to take the same approach in terms of device support
+        %li Appium also allowed us to test the sites on a real device
+        %li we also used protractor to run the heavy testing on mobile web
         
 %section
-  %section{ 'data-background' => 'images/future.jpg'}
-    %h1 Future of Mobile Testing at OTPP
+  %section
+    %img{ 'src' => 'images/future.jpg'}
+    %h3 Future of Mobile Testing at OTPP
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li So where do we go from here??
         
   %section
     %img{ 'src' => 'images/futureApp.png' }
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li If we continue developing apps in the future they will get more complicated
+        %li We will have lots of components that will have to be tested
+        %li And automation will be essential to make sure that we can tests things quickly
         
   %section
     %img{ 'src' => 'images/screenShot.png'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li The new website is a 5 year project and we will have to make sure it meets its mobile first objective
+        %li We will leverage all the tools that we have used so far to ensure succesfull testing on the new website
         
   %section{ 'data-background' => 'images/security.gif'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li Mobile and Web security issues are in the news on a daily basis
+        %li We will have to make sure that our connected apps, and our mobile sites are secure 
+        %li We will also have to make sure that the member is informed regarding security issues
         
   %section
     %img{ 'src' => 'images/internetExplorer.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li More browser support 
+        %li We have users that are using pcs/macs/tablets/phones
+        %li Android/iOS/Windows/Linux/Mac
+        %li We need to make sure that our website are working, and are displaying properly
+        %li on any device that a user logs in on
+
+  %section
+    %img{ 'src' => 'images/sauceLabs.gif'}
+    <br>
+    %img{ 'src' => 'images/browsers.jpg'}
+    %aside.notes
+      %ul
+        %li In order to have access to all browsers we need to use tools such as Sauce labs
+        %li Allows us to test across multiple browsers, and multiple operating systems
+        %li They will also have a future open of testing on real devices over the cloud
         
   %section
     %img{ 'src' => 'images/performance.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
-        
-  %section
-    %img{ 'src' => 'images/cloud.jpg'}
-    %aside.notes
-      %ul
-        %li
-        %li
-        %li
-        %li
+        %li Performance testing will also be very important
+        %li Most users these days have very high expecations when it comes to web and applications
+        %li We will have to introduce new tools and make sure that our users get the optimal performance experience
         
   %section
     %img{ 'src' => 'images/devices.jpg'}
     %aside.notes
       %ul
-        %li
-        %li
-        %li
-        %li
+        %li By 2017 most people will have at least 5 devices that are connected to the internet
+        %li Most of you in the room most likely have at least 2
+        %li We will have to make sure that the experience is the same accross all devices
         
 
 %section

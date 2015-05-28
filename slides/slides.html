@@ -134,6 +134,7 @@
 <section>
   <section>
     <h1>What is going on @OTPP?</h1>
+    <img src='images/OTPP.png'>
     <aside class='notes'>
       <ul>
         <li>Once we figured out what challenges we need to takle</li>
@@ -143,156 +144,83 @@
     </aside>
   </section>
   <section>
-    <img src='images/appium-logo.png'>
+    <h2>The Agile Projects</h2>
+    <img src='images/Legacy-Software.jpg'>
+    <img src='images/WebSite.png' width='500px'>
     <br>
-    <img src='images/appiumTests.png'>
+    <img src='images/Ice_computer_desk.jpg' width='350px'>
+    <img src='images/babysteps.png' width='350px'>
     <aside class='notes'>
-      <ul>
-        <li>Appium is an open source test automatiom framework for use with native and hybrid mobile apps</li>
-        <li>It drives iOS and Android apps using the WebDriver JSON Wire Protocol</li>
-        <li>Large community</li>
-        <li>Frequent releases</li>
-        <li>lots of support</li>
-        <li>allowed us to leverage our Selenium knowledge</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <img src='images/testNG.png'>
-    <pre><code>@Test(groups = {"RE-EMP", "OCC", "RE-EMPsmoke", "all"})&#x000A;public void fullDayTest() {&#x000A;&#x000A;//add a day&#x000A;TestUtils.addFullDay(wd, "worklog");&#x000A;&#x000A;//assert count went up&#x000A;TestUtils.delay(500);&#x000A;WebElement daycount = wd.findElementById(TestKeys.WORK_DAY_COUNT_LOCATION);&#x000A;TestUtils.delay(200);&#x000A;AssertJUnit.assertEquals("1", daycount.getText());&#x000A;&#x000A;//quit&#x000A;TestUtils.delay(500);&#x000A;wd.quit();
-    }</code></pre>
+    <h2>Agile Boards</h2>
+    <img src='images/NewWebBoard.png'>
     <aside class='notes'>
-      <ul>
-        <li>We used TestNG to write the actual tests</li>
-        <li>As a department we have been using to TestNG as the preffered tool for writing and executing tests</li>
-        <li>Allows for the tests to sit together with the code and run together with the code</li>
-        <li>this provides us with quicker feedback re any regression in the code</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <img src='images/protractor.png'>
-    <pre><code>it('will add a full day', function() {&#x000A;  browser.sleep(1000);&#x000A;  browser.switchTo().alert().accept();&#x000A;  common.resetApplication();&#x000A;  common.addNewWorkDay();&#x000A;  var dayCounter = common.getDayCounter();&#x000A;  expect(dayCounter).toEqual("1");&#x000A;});</code></pre>
+    <h2>Daily Standups!</h2>
+    <img src='images/standUp.jpg' width='500px'>
     <aside class='notes'>
-      <ul>
-        <li>The other tool we used was developed specifically for AngularJS</li>
-        <li>Protractor is an end-to-end test framework</li>
-        <li>It runs tests against your application running in a real browser</li>
-        <li>It interacts as user would</li>
-        <li>Since our app was hybrid, using protractor allowed us to run multiple functional tests in a fast manner</li>
-        <li>while running sanity tests on real devices</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <img src='images/monkeyTesting.jpg'>
+    <img src='images/automateDucky.jpg'>
     <aside class='notes'>
-      <ul>
-        <li>Monkey test was another approach we had to make sure our apps were stable</li>
-        <li>A monkey test runs with no specific test in mind</li>
-        <li>It would enter random strings into boxes</li>
-        <li>Click on random boxes</li>
-        <li>Open and close the app</li>
-        <li>Attempt to open other apps and then our app</li>
-        <li>Purpose was to make the app crash through stranious use</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <h2>Devices</h2>
-    <img src='images/androindApple.jpg'>
+    <img src='images/threeamigos_2663603b.jpg'>
     <aside class='notes'>
       <ul>
-        <li>For iOS we decided that we will support iPhone 4,5 and iPad 2 and up</li>
-        <li>We currently have iPhone 4,5,3gs and iPad 2 as test devices</li>
-        <li>For Android we needed a bit of a different approach due the vast spectrum of devices and OS</li>
-        <li>We decided we will support OS 4.0 and up</li>
-        <li>In order not to purchase 200 devices, we chose to have a low end and a high end device</li>
         <li>and make the assumption that if the app works on those, it will work on everything in between</li>
       </ul>
     </aside>
   </section>
   <section>
-    <img src='images/AppiumSetup.png'>
+    <img src='images/userStories.jpg'>
     <aside class='notes'>
-      <ul>
-        <li>Once all the devices arrived we had to connect them and set them all up for automation</li>
-        <li>This is what the Appium setup looks like</li>
-        <li>We use Git to store all our test code</li>
-        <li>Bamboo to allow us to run the tests whenever we want</li>
-        <li>We have a selenium server that allows us to have multiple devices connected to appium</li>
-        <li>and we have the appium servers running on the Mac machines that correspond to every device</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <img src='images/lab.jpg'>
+    <img src='images/hipchat.png'>
     <aside class='notes'>
-      <ul>
-        <li>This is what it actually looks like</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
 </section>
 <section>
+  <section data-background='images/17qwg5v8qb25ajpg.jpg'>
+    <aside class='notes'></aside>
+  </section>
   <section>
-    <h1>What we could be doing in the future</h1>
+    <img src='images/keep-calm-and-consistent.png'>
     <aside class='notes'>
-      <ul>
-        <li>So what do we actually test with all this technology and hardware?</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <h2>Worklog</h2>
-    <img src='images/Worklog.jpg'>
+    <img src='images/discussion.png'>
     <aside class='notes'>
-      <ul>
-        <li>Worklog helps you track your re-employment</li>
-        <li>The app is not connected to our databases</li>
-        <li>allows re-employment pensioners to add days</li>
-        <li>allows them also to track which school they worked at</li>
-        <li>which teacher they worked for</li>
-        <li>what was the job id</li>
-        <li>app is bilingual</li>
-        <li>displays warning messages at 40 days, above 50 days , and once you surpass your limit</li>
-        <li>available in Android and iOS</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <h2>ClassTime</h2>
-    <img src='images/classtime.jpg'>
+    <img src='images/automated-testing-pyramid.png'>
     <aside class='notes'>
-      <ul>
-        <li>Classtime is an application that allows the user to track their occasional employment</li>
-        <li>similar to worklog however does not any warning messages</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
   <section>
-    <h2>BabySteps</h2>
-    <img src='images/babySteps.png'>
-    <aside class='notes'>
-      <ul>
-        <li>BabySteps is the application that we are developing this year</li>
-        <li>It will allow mothers to view their maternity leaves and interact to a certain degree with them</li>
-        <li>It will be our first connected app</li>
-        <li>Members will have to sign in to view their maternity information</li>
-      </ul>
-    </aside>
-  </section>
-  <section>
-    <h2>New Member Web</h2>
     <img src='images/screenShot.png'>
     <aside class='notes'>
-      <ul>
-        <li>In 2014 we began to design and implment a new responsive web experience for members</li>
-        <li>It has a more mobile first mind set and focus</li>
-        <li>We decided to take the same approach in terms of device support</li>
-        <li>Appium also allowed us to test the sites on a real device</li>
-        <li>we also used protractor to run the heavy testing on mobile web</li>
-      </ul>
+      <ul></ul>
     </aside>
   </section>
 </section>

@@ -115,6 +115,7 @@
 %section
   %section
     %h1 What is going on @OTPP?
+    %img{ 'src' => 'images/OTPP.png'}
     %aside.notes
       %ul
         %li Once we figured out what challenges we need to takle
@@ -122,161 +123,74 @@
         %li We had to choose tools, devices, methodologies
   
   %section
-    %img{ 'src' => 'images/appium-logo.png'}
+    %h2 The Agile Projects
+    %img{ 'src' => 'images/Legacy-Software.jpg'}
+    %img{ 'src' => 'images/WebSite.png', 'width' => '500px'}
     <br>
-    %img{ 'src' => 'images/appiumTests.png'}
-    %aside.notes
-      %ul
-        %li Appium is an open source test automatiom framework for use with native and hybrid mobile apps
-        %li It drives iOS and Android apps using the WebDriver JSON Wire Protocol
-        %li Large community
-        %li Frequent releases
-        %li lots of support
-        %li allowed us to leverage our Selenium knowledge
-        
-  %section
-    %img{ 'src' => 'images/testNG.png'}  
-    %pre 
-      %code
-        :preserve
-          @Test(groups = {"RE-EMP", "OCC", "RE-EMPsmoke", "all"})
-          public void fullDayTest() {
+    %img{ 'src' => 'images/Ice_computer_desk.jpg', 'width' => '350px'}
+    %img{ 'src' => 'images/babysteps.png', 'width' => '350px'}
 
-          //add a day
-          TestUtils.addFullDay(wd, "worklog");
+    %aside.notes
+      %ul
+        
+  %section
+    %h2 Agile Boards
 
-          //assert count went up
-          TestUtils.delay(500);
-          WebElement daycount = wd.findElementById(TestKeys.WORK_DAY_COUNT_LOCATION);
-          TestUtils.delay(200);
-          AssertJUnit.assertEquals("1", daycount.getText());
-
-          //quit
-          TestUtils.delay(500);
-          wd.quit(); 
-        }
+    %img{ 'src' => 'images/NewWebBoard.png'}
     %aside.notes
       %ul
-        %li We used TestNG to write the actual tests
-        %li As a department we have been using to TestNG as the preffered tool for writing and executing tests
-        %li Allows for the tests to sit together with the code and run together with the code
-        %li this provides us with quicker feedback re any regression in the code
         
   %section
-    %img{ 'src' => 'images/protractor.png'}
-    %pre
-      %code
-        :preserve
-          it('will add a full day', function() {
-            browser.sleep(1000);
-            browser.switchTo().alert().accept();
-            common.resetApplication();
-            common.addNewWorkDay();
-            var dayCounter = common.getDayCounter();
-            expect(dayCounter).toEqual("1");
-          });
+    %h2 Daily Standups!
+    %img{ 'src' => 'images/standUp.jpg', 'width' => '500px'}
     %aside.notes
       %ul
-        %li The other tool we used was developed specifically for AngularJS
-        %li Protractor is an end-to-end test framework
-        %li It runs tests against your application running in a real browser
-        %li It interacts as user would
-        %li Since our app was hybrid, using protractor allowed us to run multiple functional tests in a fast manner
-        %li while running sanity tests on real devices
         
   %section
-    %img{ 'src' => 'images/monkeyTesting.jpg'}
+    %img{ 'src' => 'images/automateDucky.jpg'}
     %aside.notes
       %ul
-        %li Monkey test was another approach we had to make sure our apps were stable
-        %li A monkey test runs with no specific test in mind
-        %li It would enter random strings into boxes
-        %li Click on random boxes
-        %li Open and close the app
-        %li Attempt to open other apps and then our app
-        %li Purpose was to make the app crash through stranious use
         
   %section
-    %h2 Devices
-    %img{ 'src' => 'images/androindApple.jpg'}
+    %img{ 'src' => 'images/threeamigos_2663603b.jpg'}
     %aside.notes
       %ul
-        %li For iOS we decided that we will support iPhone 4,5 and iPad 2 and up
-        %li We currently have iPhone 4,5,3gs and iPad 2 as test devices
-        %li For Android we needed a bit of a different approach due the vast spectrum of devices and OS
-        %li We decided we will support OS 4.0 and up
-        %li In order not to purchase 200 devices, we chose to have a low end and a high end device
         %li and make the assumption that if the app works on those, it will work on everything in between
 
   %section
-    %img{ 'src' => 'images/AppiumSetup.png'}
+    %img{ 'src' => 'images/userStories.jpg'}
     %aside.notes
       %ul
-        %li Once all the devices arrived we had to connect them and set them all up for automation
-        %li This is what the Appium setup looks like
-        %li We use Git to store all our test code
-        %li Bamboo to allow us to run the tests whenever we want
-        %li We have a selenium server that allows us to have multiple devices connected to appium
-        %li and we have the appium servers running on the Mac machines that correspond to every device
         
   %section
-    %img{ 'src' => 'images/lab.jpg'}
+    %img{ 'src' => 'images/hipchat.png'}
     %aside.notes
       %ul
-        %li This is what it actually looks like
         
 
 %section
-  %section
-    %h1 What we could be doing in the future
+  %section{ 'data-background' => 'images/17qwg5v8qb25ajpg.jpg' }
     %aside.notes
-      %ul
-        %li So what do we actually test with all this technology and hardware?
 
         
   %section
-    %h2 Worklog
-    %img{ 'src' => 'images/Worklog.jpg'}
+    %img{ 'src' => 'images/keep-calm-and-consistent.png'}
+    %aside.notes
+      %ul  
+  %section
+    %img{ 'src' => 'images/discussion.png'}
     %aside.notes
       %ul
-        %li Worklog helps you track your re-employment
-        %li The app is not connected to our databases
-        %li allows re-employment pensioners to add days 
-        %li allows them also to track which school they worked at
-        %li which teacher they worked for
-        %li what was the job id
-        %li app is bilingual
-        %li displays warning messages at 40 days, above 50 days , and once you surpass your limit
-        %li available in Android and iOS
         
   %section
-    %h2 ClassTime
-    %img{ 'src' => 'images/classtime.jpg'}
+    %img{ 'src' => 'images/automated-testing-pyramid.png'}
     %aside.notes
       %ul
-        %li Classtime is an application that allows the user to track their occasional employment
-        %li similar to worklog however does not any warning messages
-        
-  %section
-    %h2 BabySteps
-    %img{ 'src' => 'images/babySteps.png'}
-    %aside.notes
-      %ul
-        %li BabySteps is the application that we are developing this year
-        %li It will allow mothers to view their maternity leaves and interact to a certain degree with them
-        %li It will be our first connected app
-        %li Members will have to sign in to view their maternity information
         
   %section 
-    %h2 New Member Web
     %img{ 'src' => 'images/screenShot.png'}
     %aside.notes
       %ul
-        %li In 2014 we began to design and implment a new responsive web experience for members
-        %li It has a more mobile first mind set and focus
-        %li We decided to take the same approach in terms of device support
-        %li Appium also allowed us to test the sites on a real device
-        %li we also used protractor to run the heavy testing on mobile web
         
 %section
   %section
